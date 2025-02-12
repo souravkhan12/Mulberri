@@ -1,5 +1,4 @@
 import ButtonRound from "../ui/ButtonRound";
-import FormRow from "../ui/FormRow";
 import Input from "../ui/Input";
 import styled from "styled-components";
 import { HiTrash, HiUserPlus } from "react-icons/hi2";
@@ -47,6 +46,7 @@ const AddUserButton = styled(ButtonRound)`
   @media screen and (max-width: 780px) {
     font-size: 1.2rem;
     padding: 0.8rem 0.5rem;
+    margin-left: 1rem;
 
     & svg {
       width: 1rem;

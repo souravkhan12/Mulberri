@@ -12,6 +12,10 @@ const ButtonIcon = styled.button`
   border: 1px solid var(--color-grey-300);
   font-size: 1.3rem;
 
+  @media screen and (max-width: 780px) {
+    padding: 0.6rem 1.1rem;
+  }
+
   &:hover {
     background-color: var(--color-grey-100);
     cursor: pointer;

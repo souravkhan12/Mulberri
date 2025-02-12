@@ -11,7 +11,7 @@ const ButtonIcon = styled.button`
   gap: 0.4rem;
   color: var(--color-grey-600);
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 780px) {
     font-size: 10px;
     gap: 0.1rem;
   }
