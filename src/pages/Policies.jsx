@@ -33,17 +33,20 @@ const Bdiv = styled.div`
   align-items: center;
 
   @media screen and (max-width: 780px) {
-    width: 90%;
+    width: 78%;
     align-self: center;
   }
 
   @media screen and (min-width: 781px) and (max-width: 1100px) {
-    width: 70%;
+    width: 80%;
     align-self: center;
   }
 
   @media screen and (min-width: 1100px) and (max-width: 1200px) {
     padding-left: 17rem;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 1.3rem;
   }
 `;
 
