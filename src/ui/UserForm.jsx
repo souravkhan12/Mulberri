@@ -10,8 +10,8 @@ const UserFieldContainer = styled.div`
   padding: 2rem;
 
   @media screen and (max-width: 780px) {
-    gap: 0;
     padding: 0;
+    padding-top: 1.2rem;
   }
 `;
 
