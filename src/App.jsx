@@ -24,8 +24,8 @@ function App() {
           <Routes>
             <Route element={<AppLayout />}>
               <Route index element={<Navigate replace to="policies" />} />
-              <Route path="/policies" element={<Policies />} />
-              <Route path="/policies/:id" element={<MulberriAi />} />
+              <Route path="policies" element={<Policies />} />
+              <Route path="policies/:id" element={<MulberriAi />} />
             </Route>
           </Routes>
         </BrowserRouter>
