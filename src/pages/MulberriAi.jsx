@@ -24,6 +24,9 @@ const Div = styled.div`
   flex-direction: column;
   background-color: white;
   overflow: hidden;
+
+  @media screen {
+  }
 `;
 
 const DivButton = styled.div`
@@ -45,7 +48,6 @@ const PromptDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position: relative;
 `;
 function MulberriAi() {
   const { id } = useParams();

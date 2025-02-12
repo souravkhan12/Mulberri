@@ -7,6 +7,7 @@ const StyledDiv = styled.div`
   height: 100vh;
   display: grid;
   grid-template-rows: 7rem 1px 22rem 1fr;
+  background-color: white;
 `;
 
 function AppLayout() {

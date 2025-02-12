@@ -1,9 +1,5 @@
-import { BsThreeDots } from "react-icons/bs";
 import styled from "styled-components";
 import Heading from "./Heading";
-import { HiCircleStack } from "react-icons/hi2";
-import { GrTextAlignFull } from "react-icons/gr";
-import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Card = styled.div`
   padding: 13px;
@@ -20,6 +16,10 @@ const Card = styled.div`
   @media screen and (max-width: 780px) {
     height: 20rem;
     margin-top: 5rem;
+    display: grid;
+    margin-right: -6%;
+    margin-left: 10%;
+    width: 90%;
   }
 `;
 

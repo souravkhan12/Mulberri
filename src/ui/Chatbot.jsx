@@ -10,11 +10,11 @@ const StyledContainer = styled.div`
   border-radius: var(--border-radius-md);
   width: 70%; /* Full width */
 
-  /* @media screen and (min-width: 600px) {
+  @media screen and (max-width: 767px) {
     right: 2rem;
     border-radius: 8px 8px 0 0;
     width: auto;
-  } */
+  }
 `;
 
 const Input = styled.input`

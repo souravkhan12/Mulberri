@@ -24,7 +24,7 @@ const StyledInput = styled.input`
   z-index: 3;
   border-radius: 9999px;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
   outline: none;
   &:focus {
