@@ -9,6 +9,11 @@ const UserFieldContainer = styled.div`
   flex-direction: column;
   gap: 1.2rem;
   padding: 2rem;
+
+  @media screen and (max-width: 780px) {
+    gap: 0;
+    padding: 0;
+  }
 `;
 
 const UserField = styled.div`
@@ -37,6 +42,16 @@ const AddUserButton = styled(ButtonRound)`
   & svg {
     width: 2rem;
     height: 2rem;
+  }
+
+  @media screen and (max-width: 780px) {
+    font-size: 1.2rem;
+    padding: 0.8rem 0.5rem;
+
+    & svg {
+      width: 1rem;
+      height: 1rem;
+    }
   }
 `;
 
