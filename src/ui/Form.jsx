@@ -15,7 +15,13 @@ const Form = styled.form`
   ${(props) =>
     props.type === "modal" &&
     css`
-      width: 70vw;
+      @media screen and (max-width: 680px) {
+        width: 70vw;
+      }
+
+      @media screen and (min-width: 680px) {
+        width: 57vw;
+      }
     `}
     
   overflow: hidden;
