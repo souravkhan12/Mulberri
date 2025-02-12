@@ -17,6 +17,13 @@ const StyledContainer = styled.div`
     padding: 2rem 2rem;
     width: 80%;
   }
+
+  @media screen and (min-width: 767px) and (max-width: 1471px) {
+    right: 2rem;
+    border-radius: 8px 8px 0 0;
+    padding: 2rem 2rem;
+    width: 55%;
+  }
 `;
 
 const Input = styled.input`
