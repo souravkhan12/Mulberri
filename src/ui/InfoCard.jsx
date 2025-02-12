@@ -10,9 +10,6 @@ const StyledContent = styled.div`
   justify-content: flex-end;
   padding-right: 10rem;
 
-  @media screen and (max-width: 780px) {
-    padding-top: 10rem;
-  }
   @media screen and (min-width: 780px) {
     padding-top: 5rem;
   }

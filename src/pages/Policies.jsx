@@ -88,7 +88,7 @@ const PoliciesContainer = styled.div`
     ${(props) =>
       props.isPolicyPage &&
       css`
-        height: 70rem;
+        height: 40rem;
         overflow-x: auto;
         white-space: nowrap;
         border-bottom: 1px solid var(--color-grey-100);

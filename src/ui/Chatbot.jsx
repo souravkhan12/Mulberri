@@ -14,6 +14,8 @@ const StyledContainer = styled.div`
     right: 2rem;
     border-radius: 8px 8px 0 0;
     width: auto;
+    padding: 2rem 2rem;
+    width: 80%;
   }
 `;
 

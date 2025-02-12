@@ -18,8 +18,11 @@ const Card = styled.div`
   gap: 1.4rem;
   cursor: pointer;
 
-  @media screen and (min-width: 690px) and (max-width: 825px) {
-    width: 500px;
+  @media screen and (max-width: 825px) {
+    width: 40rem;
+    height: 27rem;
+    padding: 2rem;
+    gap: 0rem;
   }
 `;
 
@@ -30,8 +33,8 @@ const Header = styled.div`
   margin-bottom: 8px;
   position: relative;
 
-  @media screen and (max-width: 767px) {
-    font-size: 10px;
+  @media screen and (max-width: 825px) {
+    font-size: 1.2rem;
   }
 `;
 
@@ -59,6 +62,10 @@ const Description = styled.p`
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
+
+  @media screen and (max-width: 825px) {
+    font-size: 1.7rem;
+  }
 `;
 
 const Footer = styled.div`

@@ -8,6 +8,10 @@ const StyledDiv = styled.div`
   display: grid;
   grid-template-rows: 7rem 1px 22rem 1fr;
   background-color: white;
+
+  @media screen and (max-width: 825px) {
+    grid-template-rows: 7rem 1px 20rem 1fr;
+  }
 `;
 
 function AppLayout() {
