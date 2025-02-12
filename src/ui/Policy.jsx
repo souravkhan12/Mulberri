@@ -4,6 +4,7 @@ import { HiCircleStack } from "react-icons/hi2";
 import { GrTextAlignFull } from "react-icons/gr";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import DropDown from "./DropDown";
+import ListUser from "./ListUser";
 
 const Card = styled.div`
   padding: 20px;
@@ -80,14 +81,14 @@ const FootDiv = styled.div`
 `;
 
 const Div = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 10rem;
   gap: 2rem;
 `;
 
 const PolicyCard = ({ policy, idx }) => {
   const navigate = useNavigate();
-  const { no, heading, description, status } = policy;
+  const { no, heading, description, status, users } = policy;
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleClick() {
@@ -113,11 +114,7 @@ const PolicyCard = ({ policy, idx }) => {
             <GrTextAlignFull />
             {formattedDate}
           </FootDiv>
-          <span>
-            <HiCircleStack />
-            <HiCircleStack />
-            <HiCircleStack />
-          </span>
+          <ListUser users={users} />
         </Footer>
       </Div>
     </Card>

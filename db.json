@@ -1,110 +1,91 @@
 {
   "Policies": [
     {
+      "id": "1",
       "no": "02777",
       "status": "onHold ",
       "heading": "Policy Two",
       "description": "Some kind of short description go here to better explain the...",
-      "id": "1"
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "id": "2",
       "no": "0226",
       "status": "Active",
       "heading": "Policy One",
-      "description": "Some kind of short description go here to better explain the..."
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "id": "3",
       "no": "0226",
       "status": "Active",
       "heading": "Policy Second",
-      "description": "Some kind of short description go here to better explain the..."
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "id": "4",
       "no": "123123",
       "status": "Active",
       "heading": "Policy One",
-      "description": "Some kind of short description go here to better explain the..."
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "id": "5",
       "no": "0228",
       "status": "Active",
       "heading": "Policy One",
-      "description": "Some kind of short description go here to better explain the..."
-    },
-    {
-      "No": "0229",
-      "status": "Active",
-      "heading": "Policy One",
       "description": "Some kind of short description go here to better explain the...",
-      "no": "0224555",
-      "id": "6"
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "id": "2d1e",
       "no": "3001",
       "heading": "Policy form",
       "status": "Active ",
-      "description": "adfadf"
+      "description": "adfadf",
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "id": "47f3",
       "no": "4000",
       "heading": "Policy form",
       "status": "Active ",
-      "description": "safasdf"
+      "description": "safasdf",
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "id": "e2e4",
       "no": "3001",
       "heading": "Policy form",
       "status": "Active ",
-      "description": "adfadf"
+      "description": "adfadf",
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberri"]
     },
     {
       "no": "3001",
       "heading": "adfadf",
       "status": "Active",
       "description": "adfadf",
-      "id": "edf1"
+      "id": "edf1",
+      "users": ["Sourav", "Mayank", "Jaanvi", "Mulberrii"]
     },
     {
-      "no": "3001",
-      "heading": "Policy form",
+      "no": "500",
+      "heading": "Uses Addedd",
       "status": "Active",
-      "description": "adfadf",
-      "id": "4764"
+      "description": "This is for the purpose of adding multiple users",
+      "id": "dfe6"
     },
     {
-      "no": "3001",
-      "heading": "Policy form",
-      "status": "on Hold",
-      "description": "adfadf",
-      "id": "d458"
-    },
-    {
-      "id": "8578",
-      "no": "4000",
-      "heading": "Policy form",
+      "no": "5000",
+      "heading": "Policy Two",
       "status": "Active",
-      "description": "adfadfadf"
-    },
-    {
-      "no": "3001",
-      "heading": "Policy form",
-      "status": "Active",
-      "description": "Policy Form ",
-      "id": "5982"
-    },
-    {
-      "no": "23000",
-      "heading": "This is the last policy",
-      "status": "On Hold",
-      "description": "sdf",
-      "id": "732e"
+      "description": "This is for the testing of the users",
+      "users": ["sourav", "khan"],
+      "id": "8f4c"
     }
   ]
 }

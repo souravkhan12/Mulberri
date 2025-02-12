@@ -4,6 +4,7 @@ import Spinner from "../ui/Spinner";
 import { usePolicies } from "../services/usePolicy";
 import AddPolicy from "../features/AddPolicy";
 import { useLocation, useParams } from "react-router-dom";
+import { usePosts } from "../context/usePostContext";
 
 const StyledContainer = styled.div`
   position: relative;
@@ -73,11 +74,15 @@ const Img = styled.img`
 `;
 
 const PoliciesContainer = styled.div`
-  height: 100vh;
-  overflow-y: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
   border-right: 1px solid var(--color-grey-100);
+
+  ${(props) =>
+    props.isPolicyPage &&
+    css`
+      overflow-y: auto;
+    `};
 
   @media screen and (max-width: 780px) {
     ${(props) =>
@@ -85,7 +90,6 @@ const PoliciesContainer = styled.div`
       css`
         height: 70rem;
         overflow-x: auto;
-        overflow-y: hidden;
         white-space: nowrap;
         border-bottom: 1px solid var(--color-grey-100);
 
@@ -99,18 +103,17 @@ const PoliciesContainer = styled.div`
 `;
 
 function Policies() {
-  const { data = [], isLoading } = usePolicies();
+  const { searchedPosts = [], isLoading } = usePosts();
+
   const location = useLocation();
   let isPolicyPage = location.pathname.includes("/policies/:");
   const { id } = useParams();
   isPolicyPage = isPolicyPage || id;
 
-  console.log(isPolicyPage);
-
   if (isLoading) return <Spinner />;
 
   return (
-    <PoliciesContainer>
+    <PoliciesContainer isPolicyPage={isPolicyPage}>
       <StyledContainer>
         <Div>
           <Bdiv>
@@ -119,8 +122,8 @@ function Policies() {
             <AddPolicy />
           </Bdiv>
           <PolicyContainer isPolicyPage={isPolicyPage}>
-            {data.map((policy, idx) => (
-              <Policy policy={policy} idx={idx} key={idx} />
+            {searchedPosts.map((policy, idx) => (
+              <Policy policy={policy} idx={idx} key={policy.id} />
             ))}
           </PolicyContainer>
         </Div>

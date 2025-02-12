@@ -1,19 +1,26 @@
-import { useForm } from "react-hook-form";
+import { useForm, useFieldArray } from "react-hook-form";
 import ButtonRound from "../ui/ButtonRound";
 import Textarea from "../ui/Textarea";
 import Form from "../ui/Form";
 import FormRow from "../ui/FormRow";
 import Input from "../ui/Input";
 import { useAddPolicy, useUpdatePolicy } from "../services/usePolicy";
+import styled from "styled-components";
+import UserForm from "../ui/UserForm";
 
 function PolicyForm({ policyToEdit = {}, onCloseModal }) {
   const { id: editId, ...editValues } = policyToEdit; // for editing
   const isEditSession = Boolean(editId);
 
-  const { register, handleSubmit, reset, formState } = useForm({
+  const { register, handleSubmit, reset, control, formState } = useForm({
     defaultValues: isEditSession ? editValues : {},
   });
   const { errors } = formState;
+  const { fields, append, remove } = useFieldArray({
+    name: "users",
+    control,
+  });
+
   const { addPolicy, isLoading: isLoading1 } = useAddPolicy({ reset });
   const { updatePolicy, isLoading } = useUpdatePolicy();
 
@@ -62,12 +69,18 @@ function PolicyForm({ policyToEdit = {}, onCloseModal }) {
         />
       </FormRow>
 
+      <UserForm
+        fields={fields}
+        register={register}
+        append={append}
+        remove={remove}
+      />
+
       <FormRow>
         <ButtonRound variation="secondary" type="reset" onClick={onCloseModal}>
           Cancel
         </ButtonRound>
         <ButtonRound>
-          {" "}
           {isEditSession ? "Edit Policy" : "Add Policy"}
         </ButtonRound>
       </FormRow>

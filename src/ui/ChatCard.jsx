@@ -32,19 +32,20 @@ const Header = styled.div`
 `;
 
 const Span = styled.span`
+  padding: 0.3rem;
   background-color: ${(props) =>
     props.status === "no"
       ? "#c4dff7"
       : props.status === "active"
       ? "#c8ffe2"
-      : "#6287AF"};
+      : "#0094f7"};
   border-radius: 0.4rem;
   color: ${(props) =>
     props.status === "no"
       ? "#0094f7"
       : props.status === "active"
       ? "green"
-      : "blue"};
+      : "white"};
 `;
 
 const Description = styled.p`

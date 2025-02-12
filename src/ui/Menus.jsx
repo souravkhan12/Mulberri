@@ -130,11 +130,9 @@ function Button({ children, onClick }) {
     close();
   }
   return (
-    <li>
-      <StyledButton onClick={handleClick}>
-        <span>{children}</span>
-      </StyledButton>
-    </li>
+    <StyledButton onClick={handleClick}>
+      <span>{children}</span>
+    </StyledButton>
   );
 }
 

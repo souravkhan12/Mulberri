@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { useDarkMode } from "../context/useDarkMode";
 
 const StyledLogo = styled.div`
   text-align: center;
@@ -21,6 +22,7 @@ const Img = styled.img`
 
 function Logo() {
   const navigate = useNavigate();
+
   return (
     <StyledLogo>
       <Img

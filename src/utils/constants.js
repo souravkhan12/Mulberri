@@ -1,1 +1,1 @@
-export const URL = "http://localhost:3000/Policies";
+export const URL = "https://data-mulberri.onrender.com/Policies";
