@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { HiCircleStack } from "react-icons/hi2";
 import { GrTextAlignFull } from "react-icons/gr";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import PolicyDropDown from "../ui/PolicyDropDown";
+import DropDown from "./DropDown";
 
 const Card = styled.div`
   padding: 20px;
@@ -40,7 +40,7 @@ const Span = styled.span`
       ? "#c4dff7"
       : props.status === "active"
       ? "#c8ffe2"
-      : "#6287AF"};
+      : "#1e7ce1"};
   border-radius: 0.4rem;
   padding: 0.32rem;
   color: ${(props) =>
@@ -48,7 +48,7 @@ const Span = styled.span`
       ? "#0094f7"
       : props.status === "active"
       ? "green"
-      : "blue"};
+      : "#ffffff"};
 `;
 
 const Description = styled.p`
@@ -58,19 +58,6 @@ const Description = styled.p`
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
-`;
-
-const Menu = styled.div`
-  position: absolute;
-  margin-left: 90%;
-  margin-top: -0.3rem;
-  & svg {
-    width: 2rem;
-    height: 2rem;
-  }
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const Footer = styled.div`
@@ -92,6 +79,12 @@ const FootDiv = styled.div`
   align-items: center;
 `;
 
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
 const PolicyCard = ({ policy, idx }) => {
   const navigate = useNavigate();
   const { no, heading, description, status } = policy;
@@ -110,31 +103,23 @@ const PolicyCard = ({ policy, idx }) => {
         <Span status={status === "Active" ? "active" : ""}>
           {status === "Active" ? "Active" : "on Hold"}
         </Span>
-        {/* <Modal>
-          <Modal.Open opens="menu-form">
-            <Menu>
-              <BsThreeDots policy={policy} />
-            </Menu>
-          </Modal.Open>
-          <Modal.Window name="menu-form">
-            <PolicyForm policyToEdit={policy} />
-          </Modal.Window>
-        </Modal> */}
-        <PolicyDropDown />
+        <DropDown policy={policy} />
       </Header>
-      <Heading as="h5">{heading}</Heading>
-      <Description onClick={handleClick}>{description}</Description>
-      <Footer>
-        <FootDiv>
-          <GrTextAlignFull />
-          {formattedDate}
-        </FootDiv>
-        <span>
-          <HiCircleStack />
-          <HiCircleStack />
-          <HiCircleStack />
-        </span>
-      </Footer>
+      <Div onClick={handleClick}>
+        <Heading as="h5">{heading}</Heading>
+        <Description>{description}</Description>
+        <Footer>
+          <FootDiv>
+            <GrTextAlignFull />
+            {formattedDate}
+          </FootDiv>
+          <span>
+            <HiCircleStack />
+            <HiCircleStack />
+            <HiCircleStack />
+          </span>
+        </Footer>
+      </Div>
     </Card>
   );
 };

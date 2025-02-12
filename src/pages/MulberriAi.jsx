@@ -9,6 +9,7 @@ import { getPolicyById } from "../services/usePolicy";
 const StyledContainer = styled.div`
   display: grid;
   overflow: hidden;
+  background-color: #fff;
   @media screen and (max-width: 780px) {
     grid-template-rows: 45rem 1fr;
   }
