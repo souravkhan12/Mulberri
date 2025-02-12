@@ -41,17 +41,24 @@ const StyledInput = styled.input`
 function HeaderMenu() {
   const navigate = useNavigate();
   const [searchOpen, setSearchOpen] = useState(false);
+  const { searchQuery, setSearchQuery } = usePosts();
+
   const ref = useOutsideClick(setSearchOpen);
 
-  const { searchQuery, setSearchQuery } = usePosts();
   function handleSearch() {
     setSearchOpen(!searchOpen);
+    setSearchQuery("");
   }
 
   return (
     <StyledHeaderMenu>
       <li>
-        <ButtonIcon onClick={() => navigate("/")}>
+        <ButtonIcon
+          onClick={() => {
+            setSearchQuery("");
+            navigate("/");
+          }}
+        >
           <BsFillGrid3X2GapFill />
           <span>Home</span>
         </ButtonIcon>

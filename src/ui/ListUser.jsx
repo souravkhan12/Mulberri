@@ -26,7 +26,7 @@ const Container = styled.div`
 function ListUser({ users }) {
   const capitalizedUsers = users?.map((user) => {
     user = user + "";
-    return user[0].toUpperCase();
+    return user[0]?.toUpperCase();
   });
   const user = capitalizedUsers?.slice(0, 3);
   const len = capitalizedUsers?.length;

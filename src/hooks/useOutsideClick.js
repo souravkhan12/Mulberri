@@ -18,6 +18,7 @@ function useOutsideClick(handler, listenCapturing = true) {
 
       // or Another way
       document.addEventListener("click", handleClick, listenCapturing);
+
       return () => {
         document.removeEventListener("click", handleClick, listenCapturing);
         // clearTimeout(timeoutId);
