@@ -18,11 +18,18 @@ const StyledContainer = styled.div`
     width: 80%;
   }
 
-  @media screen and (min-width: 767px) and (max-width: 1471px) {
+  @media screen and (min-width: 767px) and (max-width: 1180px) {
     right: 2rem;
     border-radius: 8px 8px 0 0;
     padding: 2rem 2rem;
-    width: 55%;
+    width: 50%;
+  }
+
+  @media screen and (min-width: 1190px) {
+    right: 2rem;
+    border-radius: 8px 8px 0 0;
+    padding: 2rem 2rem;
+    width: 65%;
   }
 `;
 
