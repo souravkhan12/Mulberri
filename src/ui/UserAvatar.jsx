@@ -31,7 +31,7 @@ function UserAvatar() {
   return (
     <StyledUserAvatar>
       <span>Sourav</span>
-      <Avatar src="./default-user.jpg" alt="avatar" />
+      <Avatar src="default-user.jpg" alt="avatar" />
     </StyledUserAvatar>
   );
 }
