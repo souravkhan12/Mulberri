@@ -74,11 +74,13 @@ const Footer = styled.div`
   justify-content: space-between;
 `;
 
-const formattedDate = new Date().toLocaleDateString("en-GB", {
-  day: "2-digit",
-  month: "short",
-  year: "numeric",
-});
+const formattedDate = (date) => {
+  return new Date(date).toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+};
 
 const FootDiv = styled.div`
   display: flex;
@@ -95,7 +97,7 @@ const Div = styled.div`
 
 const PolicyCard = ({ policy, idx }) => {
   const navigate = useNavigate();
-  const { no, heading, description, status, users } = policy;
+  const { no, heading, description, status, users, date } = policy;
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleClick() {
@@ -119,7 +121,7 @@ const PolicyCard = ({ policy, idx }) => {
         <Footer>
           <FootDiv>
             <GrTextAlignFull />
-            {formattedDate}
+            {formattedDate(date)}
           </FootDiv>
           <ListUser users={users} />
         </Footer>

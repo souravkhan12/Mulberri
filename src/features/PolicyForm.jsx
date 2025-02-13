@@ -5,7 +5,6 @@ import Form from "../ui/Form";
 import FormRow from "../ui/FormRow";
 import Input from "../ui/Input";
 import { useAddPolicy, useUpdatePolicy } from "../services/usePolicy";
-import styled from "styled-components";
 import UserForm from "../ui/UserForm";
 
 function PolicyForm({ policyToEdit = {}, onCloseModal }) {
@@ -25,6 +24,7 @@ function PolicyForm({ policyToEdit = {}, onCloseModal }) {
   const { updatePolicy, isLoading } = useUpdatePolicy();
 
   function handleClick(data) {
+    console.log(data);
     if (isEditSession) {
       updatePolicy({ id: editId, updatedPolicy: { ...data } });
     } else {
@@ -43,6 +43,7 @@ function PolicyForm({ policyToEdit = {}, onCloseModal }) {
         <Input
           type="text"
           id="no"
+          disabled={isEditSession}
           {...register("no", { required: "This field is required" })}
         />
       </FormRow>
@@ -66,6 +67,14 @@ function PolicyForm({ policyToEdit = {}, onCloseModal }) {
           id="description"
           defaultValue=""
           {...register("description", { required: "This field is required" })}
+        />
+      </FormRow>
+
+      <FormRow label="Policy date" error={errors?.heading?.message}>
+        <Input
+          type="date"
+          id="date"
+          {...register("date", { required: "This field is required" })}
         />
       </FormRow>
 

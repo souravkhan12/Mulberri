@@ -28,6 +28,9 @@ export function useAddPolicy({ reset }) {
       queryClient.invalidateQueries(["policies"]); // 🔥 Auto refetch
       if (reset) reset();
     },
+    onError: (err) => {
+      throw new Error(err);
+    },
   });
   return { addPolicy, isLoading };
 }

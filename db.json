@@ -1,0 +1,67 @@
+{
+  "Policies": [
+    {
+      "no": "02777",
+      "status": "onHold ",
+      "heading": "Policy Two",
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Mulberri"],
+      "date": "2025-11-01",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "no": "0226",
+      "status": "Active",
+      "heading": "Policy One",
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Mulberri"],
+      "date": "2023-11-12"
+    },
+    {
+      "id": "3",
+      "no": "0226",
+      "status": "Active",
+      "heading": "Policy Second",
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Mulberri"],
+      "date": "2023-11-12"
+    },
+    {
+      "id": "4",
+      "no": "123123",
+      "status": "Active",
+      "heading": "Policy One",
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Mulberri"],
+      "date": "2023-11-12"
+    },
+    {
+      "id": "5",
+      "no": "0228",
+      "status": "Active",
+      "heading": "Policy One",
+      "description": "Some kind of short description go here to better explain the...",
+      "users": ["Sourav", "Mayank", "Mulberri"],
+      "date": "2023-11-12"
+    },
+    {
+      "id": "2d1e",
+      "no": "3001",
+      "heading": "Policy form",
+      "status": "Active ",
+      "description": "adfadf",
+      "users": ["Sourav", "Mayank", "Mulberri"],
+      "date": "2023-11-12"
+    },
+    {
+      "id": "47f3",
+      "no": "4000",
+      "heading": "Policy form",
+      "status": "Active ",
+      "description": "safasdf",
+      "users": ["Mulberri"],
+      "date": "2023-11-12"
+    }
+  ]
+}
