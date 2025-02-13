@@ -8,9 +8,9 @@ const Input = styled.input`
   padding: 0.8rem 1.2rem;
   font-weight: bold;
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 800px) {
     width: 20vw;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0.5rem;
     font-size: 1.2rem;
   }
 `;
